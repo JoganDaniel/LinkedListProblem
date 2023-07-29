@@ -55,13 +55,13 @@ namespace LinkedListProblem
             Console.WriteLine("Value popped is {0}", this.top.data);
             this.top = this.top.next;
         }
-        internal void IsEmpty()
+        internal bool IsEmpty()
         {
-            while (this.top != null)
+            if(this.top == null)
             {
-                Peek();
-                Pop();
+                return true;
             }
+            return false;
         }
     }
 }
